@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
+import 'screens/main_menu.dart';
 
 void main() {
-  runApp(MaterialApp(
-    title: 'Tetris Game',
-    home: Scaffold(
-      appBar: AppBar(title: Text('Tetris Game')),
-      body: Center(child: Text('Welcome to Tetris Game!')),
-    ),
-  ));
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Tetris',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MainMenu(),
+    );
+  }
 }
