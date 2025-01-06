@@ -1,11 +1,29 @@
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MaterialApp(
-    title: 'Tetris Game',
-    home: Scaffold(
-      appBar: AppBar(title: Text('Tetris Game')),
-      body: Center(child: Text('Welcome to Tetris Game!')),
-    ),
-  ));
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris Game</title>
+    <link rel="manifest" href="manifest.json">
+    <script src="flutter.js" defer></script>
+    <base href="/tetris/">
+</head>
+<body>
+    <script>
+        window.onload = function () {
+            _flutter.loader.loadEntrypoint({
+                serviceWorker: {
+                    serviceWorkerVersion: "latest",
+                },
+            }).then(function (engineInitializer) {
+                return engineInitializer.initializeEngine();
+            }).then(function (appRunner) {
+                return appRunner.runApp();
+            });
+        }
+    </script>
+    <!-- GitHub Pages 404 방지용  -->
+    <noscript>
+        This app requires JavaScript to run.
+    </noscript>
+</body>
+</html>
