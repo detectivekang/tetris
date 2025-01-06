@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris Game</title>
+    <link rel="manifest" href="manifest.json">
+    <script src="flutter.js" defer></script>
+</head>
+<body>
+    <script>
+        window.onload = function () {
+            _flutter.loader.loadEntrypoint({
+                serviceWorker: {
+                    serviceWorkerVersion: "latest",
+                },
+            }).then(function (engineInitializer) {
+                return engineInitializer.initializeEngine();
+            }).then(function (appRunner) {
+                return appRunner.runApp();
+            });
+        }
+    </script>
+</body>
+</html>
